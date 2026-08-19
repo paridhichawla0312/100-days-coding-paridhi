@@ -4,13 +4,18 @@ void main(){
     float a,b,c;
     printf("Enter the sides of the triangle : ");
     scanf("%f%f%f" ,&a,&b,&c);
-    if (a==b && a==c){
-        printf("The triangle is equilateral");
-    }
-    else if (a==b || a==c || b==c){
-        printf("The triangle is isosceles");
+    if (a+b>c && a+c>b && b+c>a){
+        if (a==b && a==c){
+            printf("The triangle is equilateral");
+        }
+        else if (a==b || a==c || b==c){
+            printf("The triangle is isosceles");
+        }
+        else {
+            printf("The triangle is scalene");
+        }
     }
     else {
-        printf("The triangle is scalene");
+        printf("Not a valid triangle");
     }
 }
